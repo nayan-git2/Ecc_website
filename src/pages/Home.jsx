@@ -1,4 +1,4 @@
-import Hero from "../components/Hero/hero";
+import Hero from "../components/hero/hero";
 import LogoLoop from "../components/LogoLoop/LogoLoop";
 import CodeCard from "../components/CodeCard/CodeCard";
 import EventsSection from "../components/EventsSection/EventsSection";
