@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./stats.css";
+import "./Stats.css";
 
 const StatItem = ({ end, label }) => {
   const [count, setCount] = useState(0);
