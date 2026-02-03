@@ -1,6 +1,9 @@
+@import "tailwindcss";
+
 body {
   margin: 0;
-  background: transparent;   /* 🔥 IMPORTANT */
+  background: transparent;
+  /* 🔥 IMPORTANT */
   overflow-x: hidden;
 }
 
@@ -8,5 +11,5 @@ body {
   position: fixed;
   inset: 0;
   z-index: 0;
-   pointer-events: auto; 
+  pointer-events: auto;
 }
