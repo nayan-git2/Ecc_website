@@ -1,0 +1,120 @@
+.logo-loop-container {
+    width: 100%;
+    padding: 4rem 0;
+    overflow: hidden;
+    position: relative;
+    background: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.logo-loop-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.logo-loop-track:hover {
+    animation-play-state: paused;
+}
+
+.logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 2.5rem;
+    border-radius: 20px;
+    min-width: 150px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-item.glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.logo-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 20px var(--accent-color),
+        inset 0 0 10px var(--accent-color);
+}
+
+.logo-icon-wrapper {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.logo-item:hover .logo-icon-wrapper {
+    color: var(--accent-color);
+}
+
+.logo-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.logo-item:hover .logo-name {
+    color: #fff;
+}
+
+/* Side overlays for smooth fade */
+.fade-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 15%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.side-left {
+    left: 0;
+    background: linear-gradient(to right, #000 0%, transparent 100%);
+}
+
+.side-right {
+    right: 0;
+    background: linear-gradient(to left, #000 0%, transparent 100%);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 1rem));
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo-item {
+        padding: 1rem 1.5rem;
+        min-width: 120px;
+    }
+
+    .logo-icon-wrapper {
+        font-size: 2rem;
+    }
+
+    .logo-name {
+        font-size: 0.8rem;
+    }
+}

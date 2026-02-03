@@ -1,0 +1,22 @@
+
+
+
+.app-container{
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Floating background */
+.background{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;   /* 🔥 THIS FIXES EVERYTHING */
+}
+
+/* keeps footer at bottom */
+.page-content{
+  min-height: 120vh;
+}

@@ -1,0 +1,140 @@
+.code-card-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    position: relative;
+    overflow: hidden;
+    bottom: 50px;
+}
+
+.code-card-container {
+    width: 90%;
+    max-width: 550px;
+    padding: 25px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease;
+    user-select: none;
+}
+
+.code-card-container.glass {
+    background: rgba(10, 15, 20, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.code-card-container:hover {
+    transform: translateY(-5px) scale(1.01);
+    border-color: rgba(34, 211, 238, 0.3);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(34, 211, 238, 0.05);
+}
+
+.window-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.window-controls .dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.dot.close {
+    background-color: #ff5f56;
+}
+
+.dot.minimize {
+    background-color: #ffbd2e;
+}
+
+.dot.expand {
+    background-color: #27c93f;
+}
+
+.code-content {
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+}
+
+.code-line {
+    display: block;
+}
+
+.code-line.indent {
+    padding-left: 30px;
+}
+
+/* Syntax Highlighting matching the image */
+.keyword {
+    color: #c678dd;
+}
+
+/* Purple */
+.variable {
+    color: #61afef;
+}
+
+/* Blue */
+.operator {
+    color: #fff;
+}
+
+.bracket {
+    color: #abb2bf;
+}
+
+.property {
+    color: #fff;
+}
+
+.string {
+    color: #98c379;
+}
+
+/* Green - adjust if user wants more like image */
+
+/* Refining based on image */
+.variable {
+    color: #22d3ee;
+}
+
+/* Cyan as in image */
+.property {
+    color: #d1d5db;
+}
+
+/* Light Gray as in image */
+.string {
+    color: #22d3ee;
+}
+
+/* Cyan for string content too in some modern themes */
+
+.code-line .string {
+    color: #22d3ee;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .code-content {
+        font-size: 1.1rem;
+    }
+
+    .code-line.indent {
+        padding-left: 20px;
+    }
+
+    .code-card-container {
+        padding: 25px;
+    }
+}
