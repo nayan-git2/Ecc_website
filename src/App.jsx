@@ -11,7 +11,7 @@ import Team from "./pages/Team";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
-import Counter from "./components/Stats/Stats";
+
 
 function App() {
   return (

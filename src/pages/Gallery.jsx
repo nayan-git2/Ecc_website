@@ -2,7 +2,7 @@ import React from "react";
 import "./Gallery.css";
 // Import local assets
 import event1 from "../assets/event1.jpg";
-import aiworkshop from "../assets/aiworkshop.jpg";
+import aiworkshop from "../assets/aiworkshop.JPG";
 import feori from "../assets/feori.jpg";
 import inau from "../assets/inau.jpg";
 import heads from "../assets/heads.jpeg";
