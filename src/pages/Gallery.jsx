@@ -7,6 +7,7 @@ import feori from "../assets/feori.jpg";
 import inau from "../assets/inau.jpg";
 import heads from "../assets/heads.jpeg";
 import java from "../assets/java.jpeg";
+import ai from "../assets/ai.jpeg"; 
 
 const Gallery = () => {
     const items = [
@@ -22,7 +23,7 @@ const Gallery = () => {
         { id: 10, title: "Future Thinkers", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" },
         { id: 11, title: "Hardware Expo", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80" },
         { id: 12, title: "Heads", image: heads },
-        { id: 13, title: "Brainstorming", image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80" },
+        { id: 13, title: "Brainstorming", image:ai},
     ];
 
     return (

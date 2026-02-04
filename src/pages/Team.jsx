@@ -13,6 +13,11 @@ import pranav from "../assets/pranav.jpeg";
 import sid from "../assets/sid.jpeg";
 import neel from "../assets/neel.jpeg";
 import pratiksha from "../assets/pratiksha.jpeg";
+import savi from "../assets/savi.jpeg"; 
+import sumit from "../assets/sumit.jpeg"; 
+import adi from "../assets/adi.jpeg";
+import san from "../assets/san.jpeg"; 
+
 const TeamMember = ({ name, role, color, isLarge, image }) => (
     <div className={`team-card glass ${isLarge ? 'large-frame' : ''}`} style={{ '--accent': color }}>
         <div className="member-avatar">
@@ -35,11 +40,11 @@ const Team = () => {
     const members = [
         { name: "Gaurav Sabe", role: "President", color: "#22d3", image: gaurav },
         { name: "kanchan Rajput", role: "Vice President", color: "#a855f7", image: kanchan },
-        { name: "Sumeet Yadav", role: "Vice President", color: "#22c55e", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?fit=crop&w=200&h=200" },
+        { name: "Sumeet Yadav", role: "Vice President", color: "#22c55e", image:sumit },
         { name: "Swikriti Ghosh", role: "Secretary", color: "#fb7185", image: swi },
         { name: "Pravin Rathod", role: "Secretary", color: "#3b82f6", image: pravin },
         { name: "Abhijit Sawant", role: "Technical Head", color: "#f472b6", image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?fit=crop&w=200&h=200" },
-        { name: "Aditya Nikam", role: "Technical Head", color: "#c084fc", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?fit=crop&w=200&h=200" },
+        { name: "Aditya Nikam", role: "Technical Head", color: "#c084fc", image: adi },
         { name: "Pranav Mulik", role: "Database Head", color: "#fbbf24", image: pranav },
         { name: "Pratiksha Pankar", role: "Database Head", color: "#2dd4bf", image: pratiksha },
         { name: "Gayatri Pawar", role: "Treasurer", color: "#2dd4bf", image: gayu },
@@ -48,9 +53,9 @@ const Team = () => {
         { name: "Ravi Shriwastwa", role: "Public Relation & Marketting Head", color: "#2dd4bf", image: "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?fit=crop&w=200&h=200" },
         { name: "Sanika Kamble", role: "Public Relation & Marketting Head", color: "#2dd4bf", image: sanika },
         { name: "Siddhesh Shinde", role: "Event Management Head", color: "#2dd4bf", image: sid },
-        { name: "Savee Lakade", role: "Event Management Head", color: "#2dd4bf", image: "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?fit=crop&w=200&h=200" },
+        { name: "Savee Lakade", role: "Event Management Head", color: "#2dd4bf", image: savi },
         { name: "Nayan Bhoyar", role: "Joint Secretary", color: "#2dd4bf", image: nayan },
-        { name: "Sanskruti Jawale", role: "Joint Secretary", color: "#2dd4bf", image: "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?fit=crop&w=200&h=200" },
+        { name: "Sanskruti Jawale", role: "Joint Secretary", color: "#2dd4bf", image: san },
 
     ];
 
