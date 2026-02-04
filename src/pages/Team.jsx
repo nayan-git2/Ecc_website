@@ -1,6 +1,6 @@
 import React from "react";
 import "./Team.css";
-import Armaansir from "../assets/Armaansir.png";
+import armaansir from "../assets/armaansir.png";
 import kanchan from "../assets/kanchan.jpeg";
 import gaurav from "../assets/gaurav.jpeg";
 import swi from "../assets/swi.jpeg";
@@ -29,7 +29,7 @@ const Team = () => {
         role: "Faculty Coordinator",
         color: "#f59e0b",
         isLarge: true,
-        image: Armaansir
+        image: armaansir
     };
 
     const members = [
