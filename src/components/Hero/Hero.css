@@ -13,6 +13,9 @@
   z-index: 2;
 }
 
+.hero-content {
+  max-width: 800px;
+}
 
 .hero-title {
   font-family: 'Poppins', sans-serif;
@@ -47,6 +50,7 @@
 .hero-buttons {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .btn-primary,
@@ -133,18 +137,74 @@
   }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero {
-    padding: 0 30px;
-    text-align: center;
-  }
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
 
+@media (max-width: 1024px) {
   .hero-title {
-    font-size: 42px;
+    font-size: 52px;
   }
 
   .hero-subtitle {
-    font-size: 18px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 30px 60px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 36px;
+    line-height: 1.3;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+    gap: 15px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    padding: 16px 30px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 90px 20px 50px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    font-size: 14px;
+    padding: 14px 24px;
   }
 }

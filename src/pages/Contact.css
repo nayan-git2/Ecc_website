@@ -101,6 +101,8 @@
     font-family: inherit;
     font-size: 16px;
     transition: all 0.3s ease;
+    /* Prevent zoom on iOS */
+    font-size: 16px;
 }
 
 .form-group input:focus,
@@ -109,6 +111,11 @@
     border-color: #22d3ee;
     background: rgba(2, 6, 23, 0.6);
     box-shadow: 0 0 20px rgba(34, 211, 238, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #64748b;
 }
 
 .submit-btn {
@@ -151,12 +158,87 @@
     opacity: 0.2;
 }
 
-@media (max-width: 640px) {
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 100px 15px 60px;
+    }
+
     .contact-content {
-        padding: 30px 20px;
+        padding: 35px 25px;
+        border-radius: 24px;
+    }
+
+    .contact-header {
+        margin-bottom: 30px;
     }
 
     .contact-title {
         font-size: 32px;
+    }
+
+    .contact-subtitle {
+        font-size: 14px;
+    }
+
+    .contact-form {
+        gap: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 15px;
+    }
+
+    .submit-btn {
+        padding: 14px;
+    }
+
+    .blob {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        padding: 90px 10px 50px;
+    }
+
+    .contact-content {
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+
+    .contact-title {
+        font-size: 26px;
+    }
+
+    .contact-subtitle {
+        font-size: 13px;
+    }
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 14px;
+        border-radius: 10px;
+    }
+
+    .submit-btn {
+        font-size: 15px;
+        padding: 14px;
+        border-radius: 10px;
+    }
+
+    .blob {
+        width: 200px;
+        height: 200px;
     }
 }

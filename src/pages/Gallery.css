@@ -14,6 +14,7 @@
     font-size: 56px;
     font-weight: 800;
     margin-bottom: 60px;
+    text-align: center;
 }
 
 .gallery-grid {
@@ -102,27 +103,105 @@
     opacity: 1;
 }
 
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
 @media (max-width: 1024px) {
+    .gallery-container {
+        padding: 100px 40px 60px;
+    }
+
+    .gallery-title {
+        font-size: 46px;
+        margin-bottom: 50px;
+    }
+
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
     }
 }
 
 @media (max-width: 768px) {
     .gallery-container {
-        padding: 100px 30px 60px;
+        padding: 100px 20px 60px;
+    }
+
+    .gallery-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 180px;
+        gap: 15px;
+    }
+
+    .gallery-item {
+        border-radius: 15px;
+    }
+
+    .gallery-overlay {
+        padding-bottom: 20px;
+    }
+
+    .gallery-overlay span {
+        font-size: 14px;
+    }
+
+    /* Reset spans for mobile */
+    .item-1,
+    .item-7,
+    .item-11,
+    .item-12 {
+        grid-column: span 1;
+    }
+
+    .item-1,
+    .item-4,
+    .item-12,
+    .item-13,
+    .item-14 {
+        grid-row: span 1;
+    }
+
+    /* Feature first item */
+    .item-1 {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        padding: 90px 15px 50px;
+    }
+
+    .gallery-title {
+        font-size: 26px;
+        margin-bottom: 30px;
     }
 
     .gallery-grid {
         grid-template-columns: 1fr;
         grid-auto-rows: 200px;
+        gap: 15px;
     }
 
-    .item-1 {
+    .gallery-item {
+        border-radius: 12px;
+    }
+
+    /* Reset all spans for single column */
+    .item-1,
+    .item-7,
+    .item-11,
+    .item-12 {
         grid-column: auto;
-        grid-row: auto;
     }
 
+    .item-1,
     .item-4,
     .item-12,
     .item-13,
@@ -130,11 +209,7 @@
         grid-row: auto;
     }
 
-    .item-7,
-    .item-11,
-    .item-12,
-    .item-13,
-    .item-14 {
-        grid-column: auto;
+    .gallery-overlay span {
+        font-size: 14px;
     }
 }

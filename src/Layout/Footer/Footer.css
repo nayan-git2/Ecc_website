@@ -92,18 +92,6 @@
   font-weight: 500;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .footer-glass {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-contact {
-    text-align: center;
-  }
-}
-
 .footer-bottom {
   margin-top: 30px;
   padding: 15px 0;
@@ -111,5 +99,83 @@
   font-family: 'Poppins', sans-serif;
   font-size: 13px;
   color: #94a3b8;
-  /* border-top: 1px solid rgba(255, 255, 255, 0.15); */
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .footer-glass {
+    padding: 35px 40px;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-glass {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 25px;
+    gap: 30px;
+    margin: 0 15px;
+  }
+
+  .footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo p {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .footer-links {
+    width: 100%;
+  }
+
+  .footer-contact {
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    padding: 12px 15px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-glass {
+    padding: 25px 20px;
+    border-radius: 15px;
+    margin: 0 10px;
+  }
+
+  .footer-logo img {
+    height: 40px;
+    margin-bottom: 12px;
+  }
+
+  .footer-logo p {
+    font-size: 13px;
+  }
+
+  .footer-links h4,
+  .footer-contact h4 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .footer-links li a,
+  .footer-contact p {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    font-size: 11px;
+  }
 }

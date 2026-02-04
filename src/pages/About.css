@@ -195,12 +195,140 @@
     color: #94a3b8;
 }
 
-@media (max-width: 768px) {
+/* Social Section */
+.about-social-section {
+    margin-top: 80px;
+    text-align: center;
+    width: 100%;
+}
+
+.social-connect-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+@media (max-width: 1024px) {
     .about-container {
-        padding: 100px 30px 60px;
+        padding: 100px 50px 60px;
+    }
+
+    .about-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
     }
 
     .about-title {
+        font-size: 46px;
+    }
+
+    .social-connect-title {
         font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 100px 25px 60px;
+    }
+
+    .about-hero {
+        margin-bottom: 50px;
+    }
+
+    .about-title {
+        font-size: 32px;
+    }
+
+    .about-subtitle {
+        font-size: 16px;
+    }
+
+    .club-intro-box {
+        padding: 20px;
+        margin-top: 25px;
+    }
+
+    .club-description {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-card {
+        padding: 50px 25px 30px;
+    }
+
+    .about-card h3 {
+        font-size: 22px;
+    }
+
+    .about-card p {
+        font-size: 14px;
+    }
+
+    .card-icon {
+        width: 50px;
+        height: 50px;
+        left: 25px;
+    }
+
+    .card-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .about-social-section {
+        margin-top: 50px;
+    }
+
+    .social-connect-title {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .blob {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        padding: 90px 15px 50px;
+    }
+
+    .about-title {
+        font-size: 26px;
+    }
+
+    .about-subtitle {
+        font-size: 14px;
+    }
+
+    .hero-badge {
+        font-size: 12px;
+        padding: 5px 12px;
+    }
+
+    .about-card {
+        padding: 45px 20px 25px;
+    }
+
+    .about-card h3 {
+        font-size: 20px;
+    }
+
+    .about-card p {
+        font-size: 13px;
     }
 }

@@ -14,6 +14,7 @@
     font-size: 56px;
     font-weight: 800;
     margin-bottom: 60px;
+    text-align: center;
 }
 
 .team-grid {
@@ -103,7 +104,6 @@
     border: 2px solid var(--accent);
     transition: transform 0.3s ease;
     overflow: hidden;
-    /* Ensure image stays within bounds */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,8 +130,132 @@
     font-size: 16px;
 }
 
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .team-container {
+        padding: 100px 50px 60px;
+    }
+
+    .team-title {
+        font-size: 46px;
+        margin-bottom: 50px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
 @media (max-width: 768px) {
     .team-container {
-        padding: 100px 30px 60px;
+        padding: 100px 25px 60px;
+    }
+
+    .team-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .team-card {
+        padding: 20px 15px;
+    }
+
+    .member-avatar {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 15px;
+    }
+
+    .team-card h3 {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+    .team-card p {
+        font-size: 12px;
+    }
+
+    .coordinator-section {
+        margin-bottom: 40px;
+    }
+
+    .large-frame {
+        max-width: 280px;
+        padding: 40px !important;
+    }
+
+    .large-frame .member-avatar {
+        width: 160px;
+        height: 160px;
+    }
+
+    .large-frame h3 {
+        font-size: 20px;
+    }
+
+    .large-frame p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-container {
+        padding: 90px 15px 50px;
+    }
+
+    .team-title {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .team-card {
+        padding: 15px 10px;
+    }
+
+    .member-avatar {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .team-card h3 {
+        font-size: 13px;
+        margin-bottom: 4px;
+    }
+
+    .team-card p {
+        font-size: 10px;
+    }
+
+    .large-frame {
+        max-width: 220px;
+        padding: 25px !important;
+    }
+
+    .large-frame .member-avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .large-frame h3 {
+        font-size: 16px;
+    }
+
+    .large-frame p {
+        font-size: 12px;
     }
 }
