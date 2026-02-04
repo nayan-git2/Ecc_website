@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./hero.css";
+import "./Hero.css";
 
 const words = [
   "Hackathons",
