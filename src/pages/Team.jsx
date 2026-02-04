@@ -15,7 +15,7 @@ import neel from "../assets/neel.jpeg";
 import pratiksha from "../assets/pratiksha.jpeg";
 import savi from "../assets/savi.jpeg"; 
 import sumit from "../assets/sumit.jpeg"; 
-import adi from "../assets/adi.jpeg";
+import adi from "../assets/adi.png";
 import san from "../assets/san.jpeg"; 
 
 const TeamMember = ({ name, role, color, isLarge, image }) => (
