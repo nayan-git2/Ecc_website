@@ -84,6 +84,11 @@
     box-shadow: 0 0 40px rgba(0, 119, 181, 0.3);
 }
 
+.social-item.discord:hover {
+    background: radial-gradient(circle at 30% 30%, rgba(114, 137, 218, 0.4), rgba(114, 137, 218, 0.1));
+    box-shadow: 0 0 40px rgba(123, 57, 230, 0.3);
+}
+
 .social-tooltip {
     position: absolute;
     bottom: -3.5rem;

@@ -8,22 +8,29 @@ import inau from "../assets/inau.jpg";
 import heads from "../assets/heads.jpeg";
 import java from "../assets/java.jpeg";
 import ai from "../assets/ai.jpeg"; 
+import javawork from "../assets/javawork.jpeg"; 
+import teamsiting from "../assets/teamsiting.jpeg"; 
+import group from "../assets/group.jpeg";   
+import webd from "../assets/webd.jpeg"; 
+import code from "../assets/code.jpeg"; 
+import hi from "../assets/hi.jpeg";     
+
 
 const Gallery = () => {
     const items = [
         { id: 1, title: "FE Orientation", image: feori },
         { id: 2, title: "AI Workshop", image: aiworkshop },
         { id: 3, title: "Code Crafters", image: event1 },
-        { id: 4, title: "ECC Summit", image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&q=80" },
-        { id: 5, title: "Inaugration", image: inau },
-        { id: 6, title: "Java Workshop", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80" },
+        { id: 4, title: "Code Crafters", image: webd },
+        { id: 5, title: "Inauguration", image: inau },
+        { id: 6, title: "Members", image: teamsiting  },
         { id: 7, title: "Java Workshop", image: java },
-        { id: 8, title: "Innovation Lab", image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80" },
-        { id: 9, title: "Coding Bootcamp", image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80" },
-        { id: 10, title: "Future Thinkers", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" },
-        { id: 11, title: "Hardware Expo", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80" },
+        { id: 8, title: "Java Certification", image: group },
+        { id: 9, title: "Code Climb Hackathon", image:code},
+        { id: 10, title: "Students competing", image: hi },
+        { id: 11, title: "Java Bootcamp", image:javawork },
         { id: 12, title: "Heads", image: heads },
-        { id: 13, title: "Brainstorming", image:ai},
+        { id: 13, title: "AI Workshop  ", image:ai},
     ];
 
     return (

@@ -5,7 +5,6 @@ const Contact = () => {
     return (
         <div className="contact-container">
             <div className="contact-decor">
-                <div className="blob blob-1"></div>
                 <div className="blob blob-2"></div>
             </div>
 
