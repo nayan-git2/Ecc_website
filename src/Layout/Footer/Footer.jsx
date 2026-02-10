@@ -32,12 +32,15 @@ function Footer() {
           <h4>Contact</h4>
           <p>Department of ENTC</p>
           <p>Dr D Y Patil Institute of Technology, Pimpri, Pune </p>
-          <p className="email">contact@entccodingclub.com</p>
+          <p className="email">
+            <a href="mailto:entccodingclub@gmail.com">entccodingclub@gmail.com</a>
+          </p>
         </div>
 
-        {/* <div className="footer-bottom">
+      </div>
+
+      <div className="footer-bottom">
         © {new Date().getFullYear()} ECC Club. All rights reserved.
-      </div> */}
       </div>
     </footer>
   );

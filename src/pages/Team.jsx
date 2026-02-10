@@ -17,6 +17,8 @@ import savi from "../assets/savi.jpeg";
 import sumit from "../assets/sumit.jpeg"; 
 import adi from "../assets/adi.png";
 import san from "../assets/san.jpeg"; 
+import ravi from "../assets/ravi.jpeg";     
+import abhi from "../assets/abhi.jpeg";  
 
 const TeamMember = ({ name, role, color, isLarge, image }) => (
     <div className={`team-card glass ${isLarge ? 'large-frame' : ''}`} style={{ '--accent': color }}>
@@ -43,14 +45,14 @@ const Team = () => {
         { name: "Sumeet Yadav", role: "Vice President", color: "#22c55e", image:sumit },
         { name: "Swikriti Ghosh", role: "Secretary", color: "#fb7185", image: swi },
         { name: "Pravin Rathod", role: "Secretary", color: "#3b82f6", image: pravin },
-        { name: "Abhijit Sawant", role: "Technical Head", color: "#f472b6", image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?fit=crop&w=200&h=200" },
+        { name: "Abhijit Sawant", role: "Technical Head", color: "#f472b6", image: abhi },
         { name: "Aditya Nikam", role: "Technical Head", color: "#c084fc", image: adi },
         { name: "Pranav Mulik", role: "Database Head", color: "#fbbf24", image: pranav },
         { name: "Pratiksha Pankar", role: "Database Head", color: "#2dd4bf", image: pratiksha },
         { name: "Gayatri Pawar", role: "Treasurer", color: "#2dd4bf", image: gayu },
         { name: "Neel Malpure", role: "Treasurer", color: "#2dd4bf", image: neel },
         { name: "Arth Waghmode", role: "Creative and Social Media Head", color: "#2dd4bf", image: arth },
-        { name: "Ravi Shriwastwa", role: "Public Relation & Marketting Head", color: "#2dd4bf", image: "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?fit=crop&w=200&h=200" },
+        { name: "Ravi Shriwastwa", role: "Public Relation & Marketting Head", color: "#2dd4bf", image: ravi },
         { name: "Sanika Kamble", role: "Public Relation & Marketting Head", color: "#2dd4bf", image: sanika },
         { name: "Siddhesh Shinde", role: "Event Management Head", color: "#2dd4bf", image: sid },
         { name: "Savee Lakade", role: "Event Management Head", color: "#2dd4bf", image: savi },

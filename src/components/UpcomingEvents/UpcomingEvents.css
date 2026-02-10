@@ -1,0 +1,144 @@
+.upcoming-events-container {
+    position: relative;
+    width: 100%;
+    padding: 2rem 1rem;
+    /* Reduced padding */
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    /* Semi-transparent background */
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.05); */
+    /* Softer border */
+    margin-bottom: 5rem;
+    /* Reduced margin */
+    isolation: isolate;
+    /* backdrop-filter: blur(5px); */
+    /* Gentle blur to keep text readable but show background */
+}
+
+/* Reduced intensity of background effects to show FloatLines */
+.upcoming-events-container::before,
+.upcoming-events-container::after {
+    content: '';
+    position: absolute;
+    filter: blur(60px);
+    /* Reduced blur radius */
+    opacity: 0.4;
+    /* Reduced opacity */
+    animation: bg-pulse 10s ease-in-out infinite alternate;
+    z-index: -1;
+}
+
+/* .upcoming-events-container::before {
+    top: -10%;
+    left: -5%;
+    width: 50%;
+    height: 50%;
+    background: radial-gradient(circle, #4f46e5 0%, transparent 70%);
+}
+
+.upcoming-events-container::after {
+    bottom: -10%;
+    right: -5%;
+    width: 50%;
+    height: 50%;
+    background: radial-gradient(circle, #0ea5e9 0%, transparent 70%);
+    animation-delay: -5s;
+} */
+
+/* .upcoming-events-container .pirate-glow {
+    opacity: 0.3;
+    background: radial-gradient(circle, rgba(217, 119, 6, 0.2) 0%, transparent 60%);
+} */
+
+
+.upcoming-events-container .grid-overlay {
+    opacity: 0.3;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    /* Reduced width */
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.02);
+    /* Very subtle glass */
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    /* Reduced padding */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+.events-heading {
+    font-size: 0.75rem;
+    /* Smaller font */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-title {
+    font-size: 3.5rem;
+    /* Smaller title */
+    font-weight: 800;
+    color: #fff;
+    margin: 0.25rem 0;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    background: linear-gradient(to bottom right, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+.event-details {
+    font-size: 1.1rem;
+    /* Smaller details */
+    color: #e2e8f0;
+    margin: 1rem 0 2rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+/* Smaller Button */
+.pirate-btn {
+    position: relative;
+    padding: 14px 36px;
+    /* Reduced button padding */
+    font-size: 1rem;
+    /* Smaller font */
+    font-weight: 700;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent button bg */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
+}
+
+.pirate-btn:hover {
+    border-color: #fff;
+    background: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.7);
+}
+
+/* ... rest of existing button styles ... */
