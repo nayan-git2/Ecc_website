@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import "./Hero.css";
 
 const words = [
@@ -37,31 +36,56 @@ function Hero() {
     return () => clearTimeout(timeout);
   }, [charIndex, isDeleting, wordIndex]);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
+      transition: { 
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" }
+    }
+  };
+
   return (
     <section className="hero">
-      <div className="hero-content">
-        <h1 className="hero-title">
+      <motion.div 
+        className="hero-content"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
+        <motion.h1 className="hero-title" variants={itemVariants}>
           Building the Future,
           <br />
           <span className="gradient-text">One Commit</span> at a{" "}
           <span className="gradient-text-2">Time.</span>
-        </h1>
+        </motion.h1>
 
-        <p className="hero-subtitle">
+        <motion.p className="hero-subtitle" variants={itemVariants}>
           We do <span className="typewriter">{text}</span>
           <span className="cursor">|</span>
-        </p>
+        </motion.p>
 
-        <div className="hero-buttons">
+        <motion.div className="hero-buttons" variants={itemVariants}>
           <button className="btn-primary" onClick={() => navigate("/contact")}>
-            Join Us
+            <span>Join Us</span>
             <div className="btn-glow"></div>
           </button>
           <button className="btn-secondary" onClick={() => navigate("/about")}>
             Explore More
           </button>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

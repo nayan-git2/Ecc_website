@@ -16,8 +16,10 @@
 
 /* When Scrolled */
 .navbar.scrolled {
-  background: rgba(22, 22, 22, 0.555);
-  backdrop-filter: blur(10px);
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
 }
 
 /* Logo */
@@ -25,6 +27,11 @@
   display: flex;
   align-items: center;
   z-index: 102;
+  transition: var(--transition-smooth);
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
 }
 
 .nav-logo img {
@@ -34,7 +41,7 @@
 
 /* Links */
 .nav-links {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Outfit', sans-serif;
   list-style: none;
   display: flex;
   gap: 30px;
@@ -45,20 +52,23 @@
 .nav-links li {
   cursor: pointer;
   font-size: 15px;
-  transition: 0.3s;
+  transition: var(--transition-smooth);
+  position: relative;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: inherit;
+  color: rgba(255, 255, 255, 0.7);
+  transition: var(--transition-smooth);
 }
 
-.nav-links li:hover {
-  color: #00ffff;
+.nav-links li:hover a {
+  color: var(--primary);
 }
 
 .nav-links a.active {
-  color: #22d3ee;
+  color: var(--primary);
+  font-weight: 600;
 }
 
 /* Hamburger Menu Button */

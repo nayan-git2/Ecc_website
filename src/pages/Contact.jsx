@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { supabase } from "../supabaseClient";
 import "./Contact.css";
 
@@ -6,32 +6,44 @@ const Contact = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-    const [status, setStatus] = useState("idle"); // idle, loading, success, error
+    const [status, setStatus] = useState("idle"); // idle, loading, success, error, config_error, table_error
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Ensure that URL and key are not placeholders before submitting
-        if (import.meta.env.VITE_SUPABASE_URL === "YOUR_SUPABASE_URL") {
+        // Check if environment variables are set
+        const isPlaceholder = import.meta.env.VITE_SUPABASE_URL === "YOUR_SUPABASE_URL" || 
+                           import.meta.env.VITE_SUPABASE_ANON_KEY === "YOUR_SUPABASE_ANON_KEY";
+        
+        if (isPlaceholder || !import.meta.env.VITE_SUPABASE_URL || !import.meta.env.VITE_SUPABASE_ANON_KEY) {
             console.error("Supabase URL and Key are not set in .env!");
-            setStatus("error");
+            setStatus("config_error");
             return;
         }
 
         setStatus("loading");
 
         try {
-            // NOTE: Make sure the "contacts" table exists in your Supabase DB
-            // Run the script in /supabase/setup.sql to create it
             const { error } = await supabase
                 .from("contacts")
                 .insert([{ name, email, message }]);
 
-            if (error) throw error;
+            if (error) {
+                if (error.code === "PGRST116" || error.message.includes("relation \"contacts\" does not exist")) {
+                    setStatus("table_error");
+                } else {
+                    throw error;
+                }
+                return;
+            }
 
             setStatus("success");
+            setName("");
             setEmail("");
             setMessage("");
+
+            // Revert to idle after 5 seconds
+            setTimeout(() => setStatus("idle"), 5000);
         } catch (error) {
             console.error("Submission failed:", error.message);
             setStatus("error");
@@ -44,7 +56,12 @@ const Contact = () => {
                 <div className="blob blob-2"></div>
             </div>
 
-            <div className="contact-content glass">
+            <motion.div 
+                className="contact-content glass"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+            >
                 <div className="contact-header">
                     <h1 className="contact-title">Get in <span className="gradient-text">Touch</span></h1>
                     <p className="contact-subtitle">
@@ -89,12 +106,52 @@ const Contact = () => {
                         ></textarea>
                     </div>
 
-                    {status === "success" && (
-                        <div className="status-msg success">Message sent successfully!</div>
-                    )}
-                    {status === "error" && (
-                        <div className="status-msg error">Failed to send message. Please try again.</div>
-                    )}
+                    <AnimatePresence mode="wait">
+                        {status === "success" && (
+                            <motion.div 
+                                key="success"
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10 }}
+                                className="status-msg success"
+                            >
+                                ✨ Message sent successfully!
+                            </motion.div>
+                        )}
+                        {status === "config_error" && (
+                            <motion.div 
+                                key="config"
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10 }}
+                                className="status-msg error"
+                            >
+                                🔧 Configuration Error: Please check your .env file.
+                            </motion.div>
+                        )}
+                        {status === "table_error" && (
+                            <motion.div 
+                                key="table"
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10 }}
+                                className="status-msg error"
+                            >
+                                🗄️ Database Error: "contacts" table not found.
+                            </motion.div>
+                        )}
+                        {status === "error" && (
+                            <motion.div 
+                                key="error"
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10 }}
+                                className="status-msg error"
+                            >
+                                ❌ Failed to send. Please check console for details.
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
 
                     <button
                         type="submit"
@@ -105,7 +162,7 @@ const Contact = () => {
                         <div className="btn-glow"></div>
                     </button>
                 </form>
-            </div>
+            </motion.div>
         </div>
     );
 };
