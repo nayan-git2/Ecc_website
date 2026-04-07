@@ -20,3 +20,4 @@ CREATE POLICY "Allow public insert" ON public.contacts
 CREATE POLICY "Allow authenticated select" ON public.contacts
     FOR SELECT 
     USING (auth.role() = 'authenticated');
+
